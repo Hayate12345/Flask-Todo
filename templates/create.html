@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block body %}
+<form action="/" method="post" class="col-lg-8 mx-auto">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">タスクタイトル</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      required
+      name="title"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">タスク詳細</label>
+    <textarea
+      class="form-control"
+      id="exampleInputPassword1"
+      name="detail"
+      row="4"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">タスク期限</label>
+    <input
+      type="date"
+      class="form-check-input"
+      name="due"
+      id="exampleCheck1"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">タスク追加</button>
+</form>
+{% endblock %}
